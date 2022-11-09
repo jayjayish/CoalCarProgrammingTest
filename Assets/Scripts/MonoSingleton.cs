@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MonoSingleton<DerivedType> : MonoBehaviour where DerivedType : MonoSingleton<DerivedType>
 {
+    // Game Jam Singleton pattern code
     public static DerivedType Instance
     {
         get
@@ -12,7 +13,6 @@ public class MonoSingleton<DerivedType> : MonoBehaviour where DerivedType : Mono
     protected static DerivedType s_Instance = null;
 
     private static readonly string k_DerivedName = typeof(DerivedType).Name;
-    private static readonly string k_LogPrefix = "[MonoSingleton<" + k_DerivedName + ">]";
 
     protected virtual void Awake()
     {

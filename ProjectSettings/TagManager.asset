@@ -8,6 +8,8 @@ TagManager:
   - CylinderButton
   - PyramidButton
   - ShapeObject
+  - LoadButton
+  - SaveButton
   layers:
   - Default
   - TransparentFX

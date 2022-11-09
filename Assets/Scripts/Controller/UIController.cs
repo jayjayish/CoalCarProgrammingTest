@@ -12,18 +12,11 @@ public class UIController : MonoSingleton<UIController>
 
     private bool m_MenuActive = false;
     public bool MenuActive => m_MenuActive;
-    // Start is called before the first frame update
+
     private void Start()
     {
         m_MenuObject.SetActive(false);
     }
-
-/*     // Update is called once per frame
-    void Update()
-    {
-        
-    } */
-
 
     public void SetMenuActive(bool active)
     {
@@ -32,6 +25,7 @@ public class UIController : MonoSingleton<UIController>
 
         if (m_MenuActive)
         {
+            // Spawn menu a fixed distance away from face
             Transform cameraTransform = ControllerManager.Instance.GetCameraTransform();
             m_MenuObject.transform.position = cameraTransform.position + cameraTransform.forward * k_MenuSpawnOffset;
             m_MenuObject.transform.rotation = cameraTransform.rotation;
