@@ -1,5 +1,7 @@
+## Instructions
+
 Move around with either controller's trigger\
-The menu can be brought up with the menu button on either controller\
+The menu can be brought up with the menu button on either controller
 
 From the menu, you can click on any of the shape buttons with the\
 right controller's raycast + right controller pad
